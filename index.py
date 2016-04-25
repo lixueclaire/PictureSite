@@ -35,7 +35,7 @@ class List:
 						filelist.append(now)
 						idlist.append('browse/'+ s)
 						break
-		return render.list(filelist, idlist, n)
+		return render.list1(filelist, idlist, n)
 
 class Display:
 	def GET(self, id):

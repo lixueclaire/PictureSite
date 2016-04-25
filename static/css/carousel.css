@@ -80,6 +80,12 @@ body {
   width: 100%;
 }
 
+.grid-item{
+	padding: 3px;
+	width: 285px;
+	float: left;
+}
+
 /*Contact
 -------------------------------------------------- */
 .contact-div{
