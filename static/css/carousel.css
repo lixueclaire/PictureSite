@@ -6,6 +6,10 @@ body {
   color: #5a5a5a;
 }
 
+a:hover{
+  cursor: pointer
+}
+
 
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
@@ -78,6 +82,26 @@ body {
 
 .pic {
   width: 100%;
+  opacity: 1.0;
+  filter:alpha(opacity=100);
+}
+
+.pic:hover {
+  opacity: 0.5;
+  filter:alpha(opacity=50);
+}
+
+.title {
+  position: absolute;
+  width: 279px;
+  bottom: 3px;
+  text-align: center;
+  line-height: 25px;
+  font-size: 25px;
+  color: #555;
+  //background-color: #333;
+  //opacity: 0.5;
+  visibility: hidden;
 }
 
 .grid-item{

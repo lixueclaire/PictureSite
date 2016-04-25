@@ -82,11 +82,11 @@ $def with (filelist, n)
 			</ol>
 			<div class="carousel-inner" role="listbox">
 				<div class="item active">
-					<!--img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide"-->
 						<div class="container">
 							<div class="carousel-caption" style = "height:400px;">
-								<img src = "$filelist[0]" style = "height:400px; padding-bottom:30px" >
-								<!--p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p-->
+								<a data-toggle="modal" data-target="#0">
+									<img src = "$filelist[0]" style = "height:400px; padding-bottom:30px" >
+								</a>
 							</div>
 						</div>
 				</div>
@@ -94,7 +94,9 @@ $def with (filelist, n)
 					<div class="item">
 						<div class="container">
 							<div class="carousel-caption" style="height:400px">
-								<img src = "$filelist[i]" style = "height:400px; padding-bottom:30px" >
+								<a data-toggle="modal" data-target="#$i">
+									<img src = "$filelist[i]" style = "height:400px; padding-bottom:30px">
+								</a>
 							</div>
 						</div>
 					</div>
@@ -116,6 +118,22 @@ $def with (filelist, n)
 		
 		<div class = "footer">
 			<p class="text-center">designed by Yuki</p>
+		</div>
+		
+		
+		$for i in range(0, n):
+		<div class="modal fade" id="$i" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">Yuki's photos</h4>
+					</div>
+					<div class="modal-body">
+						<img src = "$filelist[i]" style="width:100%">
+							</div>
+				</div>
+			</div>
 		</div>
 		
 		
