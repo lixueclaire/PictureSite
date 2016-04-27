@@ -39,6 +39,17 @@ class List:
 
 class Display:
 	def GET(self, id):
+		
+		db = web.database(dbn='postgres', user='web', pw='1220lx', db='PicInfo')
+		str = 'select * from info where id = \'' + id + '\''
+		now = db.query(str)
+		title = ''
+		dis = ''
+		for k in now:
+			title = k.title
+			dis = k.detail
+			break
+		
 		path = 'static/data/' + id + '/'
 		filelist = []
 		n = 0
@@ -49,7 +60,7 @@ class Display:
 				newpath='../'+ path + s
 				filelist.append(newpath)
 				n = n + 1
-		return render.display(filelist, n)
+		return render.display(filelist, n, title, dis)
 
 class Update:
 	def GET(self):
