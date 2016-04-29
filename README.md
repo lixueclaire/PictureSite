@@ -1,10 +1,11 @@
 Picture Site
+==============================
 
 This is a website to display photos. In this project, you will use:
-1. web.py
-2. bootstrap3
-3. carousel, masonry
-4. postgresql
+* web.py
+* bootstrap3
+* carousel, masonry
+* postgresql
 
 Install
 ------------
